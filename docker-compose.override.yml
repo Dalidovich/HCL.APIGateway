@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  hcl.apigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5013:80"

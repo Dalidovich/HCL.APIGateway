@@ -1,0 +1,249 @@
+{
+  "Routes": [
+    //Identity
+    {
+      "UpstreamPathTemplate": "/api/IdentityServer/v1/authenticate",
+      "UpstreamHttpMethod": [ "POST" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.identityserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/IdentityServer/v1/authenticate"
+    },
+    {
+      "UpstreamPathTemplate": "/api/IdentityServer/v1/registration",
+      "UpstreamHttpMethod": [ "POST" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.identityserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/IdentityServer/v1/registration"
+    },
+    {
+      "UpstreamPathTemplate": "/api/IdentityServer/v1/account",
+      "UpstreamHttpMethod": [ "DELETE" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.identityserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/IdentityServer/v1/account"
+    },
+
+    ////Article
+    {
+      "UpstreamPathTemplate": "/api/Article/v1/article",
+      "UpstreamHttpMethod": [ "DELETE", "POST" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.articleservice.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Article/v1/article"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Article/v1/article/account",
+      "UpstreamHttpMethod": [ "DELETE" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.articleservice.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Article/v1/article/account"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Article/v1/article/withAthor",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.articleservice.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Article/v1/article/withAthor"
+    },
+    {
+      "UpstreamPathTemplate": "/api/ArticleOData/odata/v1/article",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.articleservice.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/ArticleOData/odata/v1/article"
+    },
+
+
+    ////Notification
+    {
+      "UpstreamPathTemplate": "/api/Notification/v1/notification/account",
+      "UpstreamHttpMethod": [ "DELETE" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.notificationsubscriptionserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Notification/v1/notification/account"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Notification/v1/notification/admin",
+      "UpstreamHttpMethod": [ "DELETE" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.notificationsubscriptionserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Notification/v1/notification/admin"
+    },
+    {
+      "UpstreamPathTemplate": "/api/NotificationOData/odata/v1/Notification",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.notificationsubscriptionserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/NotificationOData/odata/v1/Notification"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Relationship/v1/relationship",
+      "UpstreamHttpMethod": [ "POST" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.notificationsubscriptionserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Relationship/v1/relationship"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Relationship/v1/relationship/account",
+      "UpstreamHttpMethod": [ "DELETE" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.notificationsubscriptionserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Relationship/v1/relationship/account"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Relationship/v1/relationship/admin",
+      "UpstreamHttpMethod": [ "DELETE" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.notificationsubscriptionserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Relationship/v1/relationship/admin"
+    },
+    {
+      "UpstreamPathTemplate": "/api/RelationshipOData/odata/v1/Relationship",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.notificationsubscriptionserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/RelationshipOData/odata/v1/Relationship"
+    },
+
+    ////Comment
+    {
+      "UpstreamPathTemplate": "/api/Comment/v1/comment/account",
+      "UpstreamHttpMethod": [ "DELETE", "POST" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.commentserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Comment/v1/comment/account"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Comment/v1/comment/admin",
+      "UpstreamHttpMethod": [ "DELETE" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.commentserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Comment/v1/comment/admin"
+    },
+    {
+      "UpstreamPathTemplate": "/odata/v1/comment",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.commentserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/odata/v1/comment"
+    },
+    {
+      "UpstreamPathTemplate": "/comment",
+      "UpstreamHttpMethod": [ "GET" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "hcl.commentserver.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/comment"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://docker-app-prod-mmvjxavifa-nn.a.run.app/swagger/index.html"
+  }
+}

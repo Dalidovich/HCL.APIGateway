@@ -1,0 +1,17 @@
+version: '3.4'
+
+networks:
+  hclarticleserviceapi_dev:
+    external: true
+
+services:
+  hcl.apigateway:
+    image: ${DOCKER_REGISTRY-}hclapigateway
+    container_name: HCL.APIGateway
+    build:
+      context: .
+      dockerfile: HCL.APIGateway/Dockerfile
+    environment:
+      - Ocelot__JsonConfig=ocelotDocker.json
+    networks:
+      - hclarticleserviceapi_dev
